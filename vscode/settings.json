@@ -1,0 +1,39 @@
+{
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.breadcrumbs.enabled": false,
+  "editor.renderLineHighlight": "line",
+  "editor.scrollbar.vertical": "auto",
+  "editor.scrollbar.horizontal": "auto",
+  "editor.scrollbar.verticalScrollbarSize": 8,
+  "editor.scrollbar.horizontalScrollbarSize": 8,
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.list.rowHeight": 30,
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": true,
+  "window.menuBarVisibility": "toggle",
+  "files.autoSave": "afterDelay",
+  "workbench.iconTheme": "symbols",
+  "workbench.colorTheme": "Bearded Theme Vivid Black",
+  "githubIssues.queries": [
+    {
+      "label": "My Issues",
+      "query": "is:open assignee:${user} repo:${owner}/${repository}",
+      "groupBy": ["milestone"]
+    },
+    {
+      "label": "Created Issues",
+      "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+    },
+    {
+      "label": "Recent Issues",
+      "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+    }
+  ],
+  "symbols.hidesExplorerArrows": false,
+  "redhat.telemetry.enabled": true,
+  "git.autofetch": true
+}
