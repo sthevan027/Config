@@ -12,10 +12,15 @@ if (-not (Test-Path $LaunchersDir)) {
     New-Item -ItemType Directory -Path $LaunchersDir -Force | Out-Null
 }
 
-# Copia scripts de launcher
+# Copia scripts de launcher (VBS executa sem janela, app fica independente)
 Copy-Item "$ScriptDir\launch-cursor.ps1" "$LaunchersDir\" -Force -ErrorAction SilentlyContinue
+Copy-Item "$ScriptDir\launch-cursor.vbs" "$LaunchersDir\" -Force -ErrorAction SilentlyContinue
 Copy-Item "$ScriptDir\launch-terminal.ps1" "$LaunchersDir\" -Force -ErrorAction SilentlyContinue
+Copy-Item "$ScriptDir\launch-terminal.vbs" "$LaunchersDir\" -Force -ErrorAction SilentlyContinue
 Copy-Item "$ScriptDir\launch-warp.ps1" "$LaunchersDir\" -Force -ErrorAction SilentlyContinue
+Copy-Item "$ScriptDir\launch-warp.vbs" "$LaunchersDir\" -Force -ErrorAction SilentlyContinue
+Copy-Item "$ScriptDir\launch-vscode.ps1" "$LaunchersDir\" -Force -ErrorAction SilentlyContinue
+Copy-Item "$ScriptDir\launch-vscode.vbs" "$LaunchersDir\" -Force -ErrorAction SilentlyContinue
 
 $WshShell = New-Object -ComObject WScript.Shell
 
@@ -30,11 +35,11 @@ function New-Shortcut {
     Write-Host "  Criado: $(Split-Path $Path -Leaf)" -ForegroundColor Green
 }
 
-# --- 1. Cursor (Ctrl+Alt+C) - janela media 1200x800 ---
+# --- 1. Cursor (Ctrl+Alt+C) - janela 1270x300 ---
 if (Test-Path "$env:LOCALAPPDATA\Programs\cursor\Cursor.exe") {
     New-Shortcut -Path "$ShortcutsDir\Cursor.lnk" `
-        -TargetPath "powershell.exe" `
-        -Arguments "-WindowStyle Hidden -ExecutionPolicy Bypass -File `"$LaunchersDir\launch-cursor.ps1`"" `
+        -TargetPath "wscript.exe" `
+        -Arguments "`"$LaunchersDir\launch-cursor.vbs`"" `
         -Hotkey "CTRL+ALT+C"
 } else {
     Write-Host "  Cursor nao encontrado." -ForegroundColor Yellow
@@ -63,8 +68,8 @@ if (Test-Path $chromePath) {
 # --- 4. Windows Terminal (Ctrl+Alt+T) - janela pequena 700x450 ---
 if (Test-Path "$env:LOCALAPPDATA\Microsoft\WindowsApps\wt.exe") {
     New-Shortcut -Path "$ShortcutsDir\Windows Terminal.lnk" `
-        -TargetPath "powershell.exe" `
-        -Arguments "-WindowStyle Hidden -ExecutionPolicy Bypass -File `"$LaunchersDir\launch-terminal.ps1`"" `
+        -TargetPath "wscript.exe" `
+        -Arguments "`"$LaunchersDir\launch-terminal.vbs`"" `
         -Hotkey "CTRL+ALT+T"
 } else {
     New-Shortcut -Path "$ShortcutsDir\Terminal.lnk" `
@@ -76,18 +81,21 @@ if (Test-Path "$env:LOCALAPPDATA\Microsoft\WindowsApps\wt.exe") {
 # --- 5. Warp (Ctrl+Alt+W) - janela pequena 700x450 ---
 if (Test-Path "$env:LOCALAPPDATA\Programs\Warp\Warp.exe") {
     New-Shortcut -Path "$ShortcutsDir\Warp.lnk" `
-        -TargetPath "powershell.exe" `
-        -Arguments "-WindowStyle Hidden -ExecutionPolicy Bypass -File `"$LaunchersDir\launch-warp.ps1`"" `
+        -TargetPath "wscript.exe" `
+        -Arguments "`"$LaunchersDir\launch-warp.vbs`"" `
         -Hotkey "CTRL+ALT+W"
 } else {
     Write-Host "  Warp nao encontrado." -ForegroundColor Yellow
 }
 
-# --- 6. VS Code (Ctrl+Alt+V) ---
+# --- 6. VS Code (Ctrl+Alt+V) - janela 1270x300 ---
 $vscodePath = "$env:LOCALAPPDATA\Programs\Microsoft VS Code\Code.exe"
 if (-not (Test-Path $vscodePath)) { $vscodePath = "$env:ProgramFiles\Microsoft VS Code\Code.exe" }
 if (Test-Path $vscodePath) {
-    New-Shortcut -Path "$ShortcutsDir\VS Code.lnk" -TargetPath $vscodePath -Hotkey "CTRL+ALT+V"
+    New-Shortcut -Path "$ShortcutsDir\VS Code.lnk" `
+        -TargetPath "wscript.exe" `
+        -Arguments "`"$LaunchersDir\launch-vscode.vbs`"" `
+        -Hotkey "CTRL+ALT+V"
 } else {
     Write-Host "  VS Code nao encontrado." -ForegroundColor Yellow
 }

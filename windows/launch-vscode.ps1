@@ -1,4 +1,4 @@
-# Abre Cursor em janela 1270x300 centralizada
+# Abre VS Code em janela 1270x300 centralizada (mesmo tamanho do Cursor)
 Add-Type @"
 using System;
 using System.Runtime.InteropServices;
@@ -10,8 +10,9 @@ public class Win32 {
 }
 "@
 
-$exe = "$env:LOCALAPPDATA\Programs\cursor\Cursor.exe"
-if (-not (Test-Path $exe)) { Write-Host "Cursor nao encontrado." -ForegroundColor Yellow; exit 1 }
+$exe = "$env:LOCALAPPDATA\Programs\Microsoft VS Code\Code.exe"
+if (-not (Test-Path $exe)) { $exe = "$env:ProgramFiles\Microsoft VS Code\Code.exe" }
+if (-not (Test-Path $exe)) { Write-Host "VS Code nao encontrado." -ForegroundColor Yellow; exit 1 }
 
 $proc = Start-Process -FilePath $exe -ArgumentList "-n" -PassThru
 $width = 1270
@@ -21,6 +22,7 @@ $screenH = [Win32]::GetSystemMetrics(1)
 $x = [Math]::Max(0, ($screenW - $width) / 2)
 $y = [Math]::Max(0, ($screenH - $height) / 2)
 
+# VS Code usa processo Code.exe ou electron
 for ($i = 0; $i -lt 30; $i++) {
     Start-Sleep -Milliseconds 200
     try {

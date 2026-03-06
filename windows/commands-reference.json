@@ -116,12 +116,12 @@
     "pasta_atalhos": "%APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\Atalhos",
     "pasta_launchers": "%LOCALAPPDATA%\\Config\\launchers",
     "comandos": [
-      { "atalho": "Ctrl+Alt+C", "nome": "Cursor", "funcionalidade": "Abre Cursor em janela 1200x800" },
+      { "atalho": "Ctrl+Alt+C", "nome": "Cursor", "funcionalidade": "Abre Cursor em janela 1270x300" },
       { "atalho": "Ctrl+Alt+B", "nome": "Chrome", "funcionalidade": "Nova janela do Chrome" },
       { "atalho": "Ctrl+Alt+I", "nome": "Chrome Anonimo", "funcionalidade": "Chrome em modo incognito" },
       { "atalho": "Ctrl+Alt+T", "nome": "Windows Terminal", "funcionalidade": "Abre WT em janela 700x450" },
       { "atalho": "Ctrl+Alt+W", "nome": "Warp", "funcionalidade": "Abre Warp em janela 700x450" },
-      { "atalho": "Ctrl+Alt+V", "nome": "VS Code", "funcionalidade": "Abre Visual Studio Code" },
+      { "atalho": "Ctrl+Alt+V", "nome": "VS Code", "funcionalidade": "Abre VS Code em janela 1270x300" },
       { "atalho": "Ctrl+Alt+E", "nome": "Explorador", "funcionalidade": "Abre Explorador de Arquivos" }
     ]
   }

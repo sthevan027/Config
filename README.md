@@ -22,9 +22,9 @@ Config/
 └── windows/
     ├── create-shortcuts.ps1
     ├── commands-reference.json  # Referencia dos atalhos do Windows
-    ├── launch-cursor.ps1
-    ├── launch-terminal.ps1
-    └── launch-warp.ps1
+    ├── launch-cursor.ps1, .vbs
+    ├── launch-terminal.ps1, .vbs
+    └── launch-warp.ps1, .vbs
 
 settings-explained.md           # Explicacao de cada config do settings.json
 ```
@@ -47,12 +47,12 @@ Execute para criar atalhos globais (Ctrl+Alt + tecla):
 
 | Atalho | Ação |
 |--------|------|
-| `Ctrl+Alt+C` | Cursor (janela 1200×800) |
+| `Ctrl+Alt+C` | Cursor (janela 1270×300) |
 | `Ctrl+Alt+B` | Chrome — nova janela |
 | `Ctrl+Alt+I` | Chrome — janela anônima |
 | `Ctrl+Alt+T` | Windows Terminal (janela 700×450) |
 | `Ctrl+Alt+W` | Warp (janela 700×450) |
-| `Ctrl+Alt+V` | VS Code |
+| `Ctrl+Alt+V` | VS Code (janela 1270×300) |
 | `Ctrl+Alt+E` | Explorador de Arquivos |
 
 Os atalhos ficam no Menu Iniciar em **Atalhos**. Os launchers são copiados para `%LOCALAPPDATA%\Config\launchers\`.
