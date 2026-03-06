@@ -8,15 +8,28 @@ Repositório com minhas configurações de editor de código (Cursor/VS Code).
 Config/
 ├── .gitignore
 ├── README.md
-├── install.ps1                  # Aplica configs do Cursor
-├── install-windows-shortcuts.ps1 # Cria atalhos do Windows
+├── update.ps1                    # Aplica todas as configs
+├── install.ps1                   # Aplica configs do Cursor
+├── install-windows-shortcuts.ps1  # Cria atalhos do Windows
+├── uninstall-windows-shortcuts.ps1 # Remove atalhos do Windows
 ├── cursor/
 │   ├── settings.json
 │   └── keybindings.json
 ├── vscode/
 │   └── settings.json
 └── windows/
-    └── create-shortcuts.ps1     # Script dos atalhos
+    ├── create-shortcuts.ps1
+    ├── launch-cursor.ps1      # Cursor janela media
+    ├── launch-terminal.ps1    # WT janela pequena
+    └── launch-warp.ps1        # Warp janela pequena
+```
+
+## Atualizar tudo
+
+Para aplicar todas as configurações de uma vez:
+
+```powershell
+.\update.ps1
 ```
 
 ## Atalhos do Windows
@@ -29,11 +42,21 @@ Execute para criar atalhos globais (Ctrl+Alt + tecla):
 
 | Atalho | Ação |
 |--------|------|
-| `Ctrl+Alt+C` | Abrir Cursor |
-| `Ctrl+Alt+B` | Nova janela do navegador (Chrome/Edge) |
-| `Ctrl+Alt+T` | Abrir Terminal (Warp ou Windows Terminal) |
+| `Ctrl+Alt+C` | Cursor (janela 1200×800) |
+| `Ctrl+Alt+B` | Chrome — nova janela |
+| `Ctrl+Alt+I` | Chrome — janela anônima |
+| `Ctrl+Alt+T` | Windows Terminal (janela 700×450) |
+| `Ctrl+Alt+W` | Warp (janela 700×450) |
+| `Ctrl+Alt+V` | VS Code |
+| `Ctrl+Alt+E` | Explorador de Arquivos |
 
-Os atalhos ficam no Menu Iniciar em **Atalhos**.
+Os atalhos ficam no Menu Iniciar em **Atalhos**. Os launchers são copiados para `%LOCALAPPDATA%\Config\launchers\`.
+
+Para desativar/remover todos os atalhos:
+
+```powershell
+.\uninstall-windows-shortcuts.ps1
+```
 
 ## Como aplicar
 
