@@ -1,9 +1,5 @@
 [
   {
-    "key": "ctrl+alt+z",
-    "command": "workbench.action.zenMode.toggle"
-  },
-  {
     "key": "ctrl+i",
     "command": "composerMode.agent"
   },

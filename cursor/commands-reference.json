@@ -1,0 +1,311 @@
+{
+  "descricao": "Referencia de comandos do Cursor/VS Code - comando e funcionalidade",
+  "comandos": [
+    {
+      "categoria": "navegacao",
+      "comando": "workbench.action.quickOpen",
+      "atalho_padrao": "Ctrl+P",
+      "funcionalidade": "Abre busca rapida de arquivos"
+    },
+    {
+      "categoria": "navegacao",
+      "comando": "workbench.action.gotoLine",
+      "atalho_padrao": "Ctrl+G",
+      "funcionalidade": "Ir para linha especifica"
+    },
+    {
+      "categoria": "navegacao",
+      "comando": "workbench.action.showAllSymbols",
+      "atalho_padrao": "Ctrl+T",
+      "funcionalidade": "Busca simbolos no workspace"
+    },
+    {
+      "categoria": "navegacao",
+      "comando": "workbench.action.gotoSymbol",
+      "atalho_padrao": "Ctrl+Shift+O",
+      "funcionalidade": "Ir para simbolo no arquivo"
+    },
+    {
+      "categoria": "edicao",
+      "comando": "editor.action.commentLine",
+      "atalho_padrao": "Ctrl+/",
+      "funcionalidade": "Comentar/descomentar linha"
+    },
+    {
+      "categoria": "edicao",
+      "comando": "editor.action.blockComment",
+      "atalho_padrao": "Shift+Alt+A",
+      "funcionalidade": "Comentar bloco"
+    },
+    {
+      "categoria": "edicao",
+      "comando": "editor.action.duplicateSelection",
+      "atalho_padrao": "Shift+Alt+Down",
+      "funcionalidade": "Duplicar linha ou selecao"
+    },
+    {
+      "categoria": "edicao",
+      "comando": "editor.action.moveLineUp",
+      "atalho_padrao": "Alt+Up",
+      "funcionalidade": "Mover linha para cima"
+    },
+    {
+      "categoria": "edicao",
+      "comando": "editor.action.moveLineDown",
+      "atalho_padrao": "Alt+Down",
+      "funcionalidade": "Mover linha para baixo"
+    },
+    {
+      "categoria": "edicao",
+      "comando": "editor.action.deleteLines",
+      "atalho_padrao": "Ctrl+Shift+K",
+      "funcionalidade": "Deletar linha(s)"
+    },
+    {
+      "categoria": "edicao",
+      "comando": "editor.action.insertLineAfter",
+      "atalho_padrao": "Ctrl+Enter",
+      "funcionalidade": "Inserir linha abaixo"
+    },
+    {
+      "categoria": "edicao",
+      "comando": "editor.action.insertLineBefore",
+      "atalho_padrao": "Ctrl+Shift+Enter",
+      "funcionalidade": "Inserir linha acima"
+    },
+    {
+      "categoria": "edicao",
+      "comando": "editor.action.indentLines",
+      "atalho_padrao": "Ctrl+]",
+      "funcionalidade": "Aumentar indentacao"
+    },
+    {
+      "categoria": "edicao",
+      "comando": "editor.action.outdentLines",
+      "atalho_padrao": "Ctrl+[",
+      "funcionalidade": "Diminuir indentacao"
+    },
+    {
+      "categoria": "edicao",
+      "comando": "editor.action.formatDocument",
+      "atalho_padrao": "Shift+Alt+F",
+      "funcionalidade": "Formatar documento"
+    },
+    {
+      "categoria": "edicao",
+      "comando": "editor.action.formatSelection",
+      "atalho_padrao": "Ctrl+K Ctrl+F",
+      "funcionalidade": "Formatar selecao"
+    },
+    {
+      "categoria": "busca",
+      "comando": "actions.find",
+      "atalho_padrao": "Ctrl+F",
+      "funcionalidade": "Buscar no arquivo"
+    },
+    {
+      "categoria": "busca",
+      "comando": "editor.action.startFindReplaceAction",
+      "atalho_padrao": "Ctrl+H",
+      "funcionalidade": "Buscar e substituir"
+    },
+    {
+      "categoria": "busca",
+      "comando": "workbench.action.findInFiles",
+      "atalho_padrao": "Ctrl+Shift+F",
+      "funcionalidade": "Buscar em arquivos"
+    },
+    {
+      "categoria": "busca",
+      "comando": "workbench.action.replaceInFiles",
+      "atalho_padrao": "Ctrl+Shift+H",
+      "funcionalidade": "Substituir em arquivos"
+    },
+    {
+      "categoria": "interface",
+      "comando": "workbench.action.toggleSidebarVisibility",
+      "atalho_padrao": "Ctrl+B",
+      "funcionalidade": "Mostrar/ocultar barra lateral"
+    },
+    {
+      "categoria": "interface",
+      "comando": "workbench.action.togglePanel",
+      "atalho_padrao": "Ctrl+J",
+      "funcionalidade": "Mostrar/ocultar painel inferior"
+    },
+    {
+      "categoria": "interface",
+      "comando": "workbench.action.toggleZenMode",
+      "atalho_padrao": "Ctrl+K Z",
+      "funcionalidade": "Alternar Zen Mode (modo foco)"
+    },
+    {
+      "categoria": "interface",
+      "comando": "workbench.action.toggleFullScreen",
+      "atalho_padrao": "F11",
+      "funcionalidade": "Alternar tela cheia"
+    },
+    {
+      "categoria": "interface",
+      "comando": "workbench.action.zoomIn",
+      "atalho_padrao": "Ctrl+=",
+      "funcionalidade": "Aumentar zoom"
+    },
+    {
+      "categoria": "interface",
+      "comando": "workbench.action.zoomOut",
+      "atalho_padrao": "Ctrl+-",
+      "funcionalidade": "Diminuir zoom"
+    },
+    {
+      "categoria": "interface",
+      "comando": "workbench.action.resetZoom",
+      "atalho_padrao": "Ctrl+0",
+      "funcionalidade": "Resetar zoom"
+    },
+    {
+      "categoria": "interface",
+      "comando": "workbench.action.openGlobalKeybindings",
+      "atalho_padrao": "Ctrl+K Ctrl+S",
+      "funcionalidade": "Abrir atalhos de teclado"
+    },
+    {
+      "categoria": "interface",
+      "comando": "workbench.action.openCommandPalette",
+      "atalho_padrao": "Ctrl+Shift+P",
+      "funcionalidade": "Abrir paleta de comandos"
+    },
+    {
+      "categoria": "tabs",
+      "comando": "workbench.action.nextEditor",
+      "atalho_padrao": "Ctrl+Tab",
+      "funcionalidade": "Proxima aba"
+    },
+    {
+      "categoria": "tabs",
+      "comando": "workbench.action.previousEditor",
+      "atalho_padrao": "Ctrl+Shift+Tab",
+      "funcionalidade": "Aba anterior"
+    },
+    {
+      "categoria": "tabs",
+      "comando": "workbench.action.closeActiveEditor",
+      "atalho_padrao": "Ctrl+W",
+      "funcionalidade": "Fechar aba ativa"
+    },
+    {
+      "categoria": "tabs",
+      "comando": "workbench.action.closeAllEditors",
+      "atalho_padrao": "",
+      "funcionalidade": "Fechar todas as abas"
+    },
+    {
+      "categoria": "tabs",
+      "comando": "workbench.action.reopenClosedEditor",
+      "atalho_padrao": "Ctrl+Shift+T",
+      "funcionalidade": "Reabrir ultima aba fechada"
+    },
+    {
+      "categoria": "cursor",
+      "comando": "composerMode.agent",
+      "atalho_padrao": "Ctrl+I",
+      "funcionalidade": "Abrir Composer/Agent (Cursor)"
+    },
+    {
+      "categoria": "cursor",
+      "comando": "workbench.action.toggleUnifiedSidebarFromKeyboard",
+      "atalho_padrao": "Ctrl+Alt+S",
+      "funcionalidade": "Alternar sidebar unificada (Cursor)"
+    },
+    {
+      "categoria": "cursor",
+      "comando": "aichat.newchataction",
+      "atalho_padrao": "",
+      "funcionalidade": "Novo chat (Cursor)"
+    },
+    {
+      "categoria": "cursor",
+      "comando": "cursor.action.toggleTerminal",
+      "atalho_padrao": "Ctrl+`",
+      "funcionalidade": "Alternar terminal (Cursor)"
+    },
+    {
+      "categoria": "git",
+      "comando": "git.commit",
+      "atalho_padrao": "Ctrl+Shift+G",
+      "funcionalidade": "Abrir painel Git"
+    },
+    {
+      "categoria": "git",
+      "comando": "git.commitAll",
+      "atalho_padrao": "Ctrl+Shift+G G",
+      "funcionalidade": "Commit (via Git panel)"
+    },
+    {
+      "categoria": "debug",
+      "comando": "workbench.action.debug.start",
+      "atalho_padrao": "F5",
+      "funcionalidade": "Iniciar debug"
+    },
+    {
+      "categoria": "debug",
+      "comando": "workbench.action.debug.stop",
+      "atalho_padrao": "Shift+F5",
+      "funcionalidade": "Parar debug"
+    },
+    {
+      "categoria": "debug",
+      "comando": "workbench.action.debug.run",
+      "atalho_padrao": "Ctrl+F5",
+      "funcionalidade": "Executar sem debug"
+    },
+    {
+      "categoria": "multicursor",
+      "comando": "editor.action.insertCursorBelow",
+      "atalho_padrao": "Ctrl+Alt+Down",
+      "funcionalidade": "Adicionar cursor abaixo"
+    },
+    {
+      "categoria": "multicursor",
+      "comando": "editor.action.insertCursorAbove",
+      "atalho_padrao": "Ctrl+Alt+Up",
+      "funcionalidade": "Adicionar cursor acima"
+    },
+    {
+      "categoria": "multicursor",
+      "comando": "editor.action.addSelectionToNextFindMatch",
+      "atalho_padrao": "Ctrl+D",
+      "funcionalidade": "Selecionar proxima ocorrencia"
+    },
+    {
+      "categoria": "multicursor",
+      "comando": "editor.action.selectHighlights",
+      "atalho_padrao": "Ctrl+Shift+L",
+      "funcionalidade": "Selecionar todas as ocorrencias"
+    },
+    {
+      "categoria": "extensao",
+      "comando": "workbench.extensions.action.showInstalledExtensions",
+      "atalho_padrao": "Ctrl+Shift+X",
+      "funcionalidade": "Abrir gerenciador de extensoes"
+    },
+    {
+      "categoria": "config",
+      "comando": "workbench.action.openSettings",
+      "atalho_padrao": "Ctrl+,",
+      "funcionalidade": "Abrir configuracoes"
+    },
+    {
+      "categoria": "config",
+      "comando": "workbench.action.openSettingsJson",
+      "atalho_padrao": "",
+      "funcionalidade": "Abrir settings.json"
+    },
+    {
+      "categoria": "config",
+      "comando": "workbench.action.openKeybindings",
+      "atalho_padrao": "",
+      "funcionalidade": "Abrir keybindings"
+    }
+  ]
+}

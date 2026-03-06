@@ -14,14 +14,19 @@ Config/
 ├── uninstall-windows-shortcuts.ps1 # Remove atalhos do Windows
 ├── cursor/
 │   ├── settings.json
-│   └── keybindings.json
+│   ├── keybindings.json
+│   └── commands-reference.json   # Referencia de comandos e funcionalidades
 ├── vscode/
-│   └── settings.json
+│   ├── settings.json
+│   └── commands-reference.json   # Referencia de comandos e funcionalidades
 └── windows/
     ├── create-shortcuts.ps1
-    ├── launch-cursor.ps1      # Cursor janela media
-    ├── launch-terminal.ps1    # WT janela pequena
-    └── launch-warp.ps1        # Warp janela pequena
+    ├── commands-reference.json  # Referencia dos atalhos do Windows
+    ├── launch-cursor.ps1
+    ├── launch-terminal.ps1
+    └── launch-warp.ps1
+
+settings-explained.md           # Explicacao de cada config do settings.json
 ```
 
 ## Atualizar tudo
@@ -91,6 +96,8 @@ Copy-Item "vscode\settings.json" "$env:APPDATA\Code\User\settings.json"
 cp vscode/settings.json ~/.config/Code/User/settings.json
 ```
 
+Para entender cada configuracao do `settings.json`, veja [settings-explained.md](settings-explained.md).
+
 ## Extensões recomendadas
 
 - **Bearded Theme Vivid Black** — tema de cores
@@ -101,6 +108,5 @@ cp vscode/settings.json ~/.config/Code/User/settings.json
 
 | Atalho | Ação |
 |--------|------|
-| `Ctrl+Alt+Z` | Zen Mode |
 | `Ctrl+I` | Composer/Agent |
 | `Ctrl+Alt+S` | Alternar sidebar (quando unificada) |
