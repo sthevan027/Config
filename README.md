@@ -8,14 +8,32 @@ Repositório com minhas configurações de editor de código (Cursor/VS Code).
 Config/
 ├── .gitignore
 ├── README.md
-├── install.ps1           # Script para aplicar no Cursor (Windows)
+├── install.ps1                  # Aplica configs do Cursor
+├── install-windows-shortcuts.ps1 # Cria atalhos do Windows
 ├── cursor/
 │   ├── settings.json
 │   └── keybindings.json
-└── vscode/
-    └── settings.json
-
+├── vscode/
+│   └── settings.json
+└── windows/
+    └── create-shortcuts.ps1     # Script dos atalhos
 ```
+
+## Atalhos do Windows
+
+Execute para criar atalhos globais (Ctrl+Alt + tecla):
+
+```powershell
+.\install-windows-shortcuts.ps1
+```
+
+| Atalho | Ação |
+|--------|------|
+| `Ctrl+Alt+C` | Abrir Cursor |
+| `Ctrl+Alt+B` | Nova janela do navegador (Chrome/Edge) |
+| `Ctrl+Alt+T` | Abrir Terminal (Warp ou Windows Terminal) |
+
+Os atalhos ficam no Menu Iniciar em **Atalhos**.
 
 ## Como aplicar
 
